@@ -369,7 +369,7 @@ canvas {
 .projects .title::after
  {
   background: black;
-  content: "what i provide";
+  content: "what I provide";
 }
 .services .serv-content .card {
   width: calc(33% - 20px);
@@ -404,7 +404,7 @@ canvas {
 
 /* skills section styling */
 .skills .title::after {
-  content: "what i know";
+  content: "what I know";
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
