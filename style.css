@@ -682,6 +682,9 @@ footer span a:hover {
   .icons a{
     margin: 0 10px;
   }
+  .tx{
+    font-size: 15px;
+  }
 }
 .navbar .menu.active {
   transform: translateX(0%);
