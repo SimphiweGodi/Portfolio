@@ -690,6 +690,9 @@ footer span a:hover {
   transform: translateX(0%);
 }
 @media (max-width: 500px) {
+  .tx{
+    font-size: 15px;
+  }
   .home .home-content .text-2 {
     font-size: 50px;
   }
