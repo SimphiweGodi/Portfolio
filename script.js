@@ -13,39 +13,21 @@ $(document).ready(function () {
       $(".scroll-up-btn").removeClass("show");
     }
   });
-  $(".burger").click(function () {
-    $(".navbar .menu").toggleClass("active");
-    const navlinks = document.querySelectorAll(".menu li");
-    const burger = document.querySelector(".burger");
-    navlinks.forEach((links, index) => {
-      if (links.style.animation) {
-        links.style.animation = "";
-      } else {
-        links.style.animation = `navLinkFade 0.3s ease forwards ${
-          index / 7 + 0.5
-        }s`;
-      }
-    });
-    burger.classList.toggle("toggle");
-  });
   // slide-up script
   $(".scroll-up-btn").click(function () {
     $("html").animate({ scrollTop: 0 });
     // removing smooth scroll on slide-up button click
     $("html").css("scrollBehavior", "auto");
   });
-
   $(".navbar .menu li a").click(function () {
     // applying again smooth scroll on menu items click
     $("html").css("scrollBehavior", "smooth");
   });
-
   // toggle menu/navbar script
   $(".menu-btn").click(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
-
   // typing text animation script
   var typed = new Typed(".typing", {
     strings: ["Developer", "Designer", "Freelancer"],
@@ -53,7 +35,6 @@ $(document).ready(function () {
     backSpeed: 60,
     loop: true,
   });
-
   var typed = new Typed(".typing-2", {
     strings: ["Developer", "Designer", "Freelancer"],
     typeSpeed: 100,
@@ -82,47 +63,40 @@ $(document).ready(function () {
       },
     },
   });
-
   // MODEL SCRIPT
   const openModalButtons = document.querySelectorAll("[data-modal-target]");
   const closeModalButtons = document.querySelectorAll("[data-close-button]");
   const overlay = document.getElementById("overlay");
-
   openModalButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const modal = document.querySelector(button.dataset.modalTarget);
       openModal(modal);
     });
   });
-
   overlay.addEventListener("click", () => {
     const modals = document.querySelectorAll(".modal.active");
     modals.forEach((modal) => {
       closeModal(modal);
     });
   });
-
   closeModalButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const modal = button.closest(".modal");
       closeModal(modal);
     });
   });
-
   function openModal(modal) {
     if (modal == null) return;
     modal.classList.add("active");
     overlay.classList.add("active");
   }
-
   function closeModal(modal) {
     if (modal == null) return;
     modal.classList.remove("active");
     overlay.classList.remove("active");
   }
-
   /* ---- particles.js config ---- */
-  particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('callback - script.js config loaded');
+  particlesJS.load("particles-js", "particles.json", function () {
+    console.log("callback - script.js config loaded");
   });
 });

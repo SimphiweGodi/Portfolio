@@ -131,17 +131,11 @@ section .title::after {
 }
 
 /* menu btn styling */
-.burger {
-  display: none;
-}
-.burger div {
-  width: 30px;
-  height: 3px;
-  background-color: whitesmoke;
-  font-size: 19px;
+.menu-btn{
+  color: whitesmoke;
+  font-size: 23px;
   cursor: pointer;
-  margin: 5px;
-  transition: all 0.2s ease-in-out;
+  display: none;
 }
 .scroll-up-btn {
   position: fixed;
@@ -599,36 +593,37 @@ footer span a:hover {
   }
 }
 @media (max-width: 947px) {
-  .burger {
+  .menu-btn{
     display: block;
     z-index: 999;
-    cursor: pointer;
-  }
-  .navbar .menu {
-    width: 50%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
+}
+.menu-btn i.active:before{
+    content: "\f00d";
+}
+.navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;    
+    z-index: 999;
+    right: -100%;
+    border: solid green 0.8px;
+    top: 0;
+    background: rgba(17, 17, 17, 0.959);
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.5s ease;
+}
+.navbar .menu.active{
     right: 0;
-    top: 10vh;
-    align-items: center;
-    background: rgb(0, 128, 0);
-    transform: translateX(100%);
-    transition: transform 0.9s ease-in;
-  }
-  .navbar {
-    padding: 10px 0;
-  }
-  .navbar .menu li {
-    display: flex;
-    opacity: 0;
-  }
-  .navbar .menu li a {
-    display: flex;
+}
+.navbar .menu li{
+    display: block;
+}
+.navbar .menu li a{
+    display: inline-block;
     margin: 20px 0;
     font-size: 25px;
-  }
+}
   .home .home-content .text-2 {
     font-size: 70px;
   }
@@ -686,13 +681,10 @@ footer span a:hover {
     font-size: 15px;
   }
 }
-.navbar .menu.active {
+.navbar .menu-active {
   transform: translateX(0%);
 }
 @media (max-width: 500px) {
-  .tx{
-    font-size: 15px;
-  }
   .home .home-content .text-2 {
     font-size: 50px;
   }
