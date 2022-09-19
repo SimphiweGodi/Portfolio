@@ -817,8 +817,8 @@ span.fas {
 }
 .icons a:nth-child(4) .layer span,
 .icons a:nth-child(4) .text {
-  color: #2867b2;
-  border-color: #2867b2;
+  color: green;
+  border-color: green;
 }
 .icons a:nth-child(5) .layer span,
 .icons a:nth-child(5) .text {
@@ -840,7 +840,7 @@ span.fas {
   box-shadow: -1px 1px 3px #e1306c;
 }
 .icons a:hover:nth-child(4) .layer span {
-  box-shadow: -1px 1px 3px #2867b2;
+  box-shadow: -1px 1px 3px green;
 }
 .icons a:hover:nth-child(5) .layer span {
   box-shadow: -1px 1px 3px #ff0000;

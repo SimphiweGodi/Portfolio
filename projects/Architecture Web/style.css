@@ -112,6 +112,9 @@ body{
   color:#fff;
 }
 
+a{
+  text-decoration: none;
+}
 
 .home .counting{
   min-height: 40vh;
